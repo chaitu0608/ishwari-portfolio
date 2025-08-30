@@ -6,15 +6,12 @@ import { ShinyButton } from "@/components/magicui/shiny-button";
 import northeastern from "@/assets/images/northeastern.png";
 import njcu from "@/assets/images/njcu.png";
 import podimetrics from "@/assets/images/podimetrics.png";
+import placeholderLogo from "@/assets/images/podimetrics.png"; // Placeholder logo (optional)
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 
 function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    document.title = "Ishwari Dhamdhere | Portfolio";
-  }, []);
 
   useEffect(() => {
     const media = window.matchMedia(query);
@@ -40,6 +37,11 @@ const Home = () => {
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 639px)");
   const Wrapper: React.ElementType = isMobile ? "div" : AuroraBackground;
+  const [showPodimetricsDetails, setShowPodimetricsDetails] = useState(false);
+  const [showPodimetricsManagerDetails, setShowPodimetricsManagerDetails] =
+    useState(false);
+  const [showNjcuDetails, setShowNjcuDetails] = useState(false);
+  const [showHealthcareDetails, setShowHealthcareDetails] = useState(false); // State for Healthcare Website details
 
   return (
     <Wrapper className="bg-white dark:bg-black">
@@ -123,9 +125,11 @@ const Home = () => {
                     </div>
                     <ShinyButton
                       className="px-4 py-1 text-xs rounded-full mt-1"
-                      onClick={() => navigate("/projects/")}
+                      onClick={() =>
+                        setShowPodimetricsDetails(!showPodimetricsDetails)
+                      }
                     >
-                      Know more
+                      {showPodimetricsDetails ? "Hide Details" : "Know More"}
                     </ShinyButton>
                   </div>
                   <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
@@ -133,12 +137,49 @@ const Home = () => {
                   </p>
                 </div>
 
+                {/* Collapsible Section for Podimetrics */}
+                {showPodimetricsDetails && (
+                  <div className="space-y-4 mt-4 border-t border-neutral-200 dark:border-neutral-700 pt-4">
+                    <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
+                      Podimetrics, Process Improvement Initiative | MA, USA
+                    </h3>
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                      <li>
+                        Developed and standardized project management templates
+                        such as charters, plans, stakeholder registers, RACI and
+                        communication plans to ensure consistency.
+                      </li>
+                      <li>
+                        Defined requirements, estimates for scope, schedule,
+                        budget, and risks, securing sponsor alignment and
+                        approvals.
+                      </li>
+                      <li>
+                        Monitored risk, budget, and resource plans, mitigating
+                        10+ high-priority risks and reducing schedule delays by
+                        20%.
+                      </li>
+                      <li>
+                        Directed cross-functional teams, motivating members,
+                        resolving conflicts, and ensuring adherence to
+                        methodologies
+                      </li>
+                      <li>
+                        Delivered status reports and change management processes
+                        to stakeholders, maintaining transparency and ensuring
+                        project success.
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+              <div className="space-y-6">
                 <div className="flex justify-between items-start">
-                  <div className="space-y-1 mb-1">
+                  <div className="space-y-1">
                     <div className="flex items-center space-x-3">
                       <img
                         src={podimetrics}
-                        alt="Podimetrics Logo"
+                        alt="Podimetrics logo"
                         className="h-12 w-auto object-contain"
                       />
                       <div>
@@ -152,9 +193,15 @@ const Home = () => {
                     </div>
                     <ShinyButton
                       className="px-4 py-1 text-xs rounded-full mt-1"
-                      onClick={() => navigate("/projects")}
+                      onClick={() =>
+                        setShowPodimetricsManagerDetails(
+                          !showPodimetricsManagerDetails
+                        )
+                      }
                     >
-                      Know more
+                      {showPodimetricsManagerDetails
+                        ? "Hide Details"
+                        : "Know More"}
                     </ShinyButton>
                   </div>
                   <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
@@ -162,26 +209,186 @@ const Home = () => {
                   </p>
                 </div>
 
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center space-x-3">
-                    <img
-                      src={njcu}
-                      alt="College Logo"
-                      className="h-12 w-auto object-contain"
-                    />
-                    <div>
-                      <p className="font-medium">NEW JERSEY CITY UNIVERSITY</p>
-                      <p className="text-sm text-neutral-600 dark:text-muted-foreground">
-                        Project Assistant
-                        <br />
-                        NJ, USA
-                      </p>
+                {/* Collapsible Section for Podimetrics */}
+                {showPodimetricsManagerDetails && (
+                  <div className="space-y-4 mt-4 border-t border-neutral-200 dark:border-neutral-700 pt-4">
+                    <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
+                      Podimetrics, Project Manager | MA, USA
+                    </h3>
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                      <li>
+                        Built and maintained integrated program/project
+                        schedules, tracking milestones, deliverables,
+                        dependencies, and deadlines from Alpha prototype through
+                        Beta build for a $1M FDA Class I 510(k) medical device.
+                      </li>
+                      <li>
+                        Directed cross-functional programs bridging engineering,
+                        regulatory, operations, and compliance to deliver
+                        digital health platforms on time and in scope.
+                      </li>
+                      <li>
+                        Developed and maintained risk registers, mitigation
+                        plans, and forecasting models, reducing timeline
+                        overruns by 25% and improving schedule reliability.
+                      </li>
+                      <li>
+                        Created a centralized project documentation hub,
+                        standardizing onboarding, change control, and risk
+                        tracking.
+                      </li>
+                      <li>
+                        Partnered with program managers to improve resource
+                        allocation and capacity planning and timely project
+                        delivery.
+                      </li>
+                      <li>
+                        Oversaw launch readiness and go-to-market activities for
+                        software projects, collaborating with product,
+                        operations, and marketing to drive adoption and reduce
+                        post-launch escalations by 40%.
+                      </li>
+                      <li>
+                        Ensured compliance with HIPAA, FDA, and internal QMS
+                        standards via S3 artifact tracking, ETQ Reliance
+                        workflows, and controlled document management.
+                      </li>
+                      <li>
+                        Captured and resolved 20+ critical design action items
+                        to support regulatory submissions, contributing to
+                        successful Phase 2 closure and Phase 3 readiness.
+                      </li>
+                      <li>
+                        Coordinated with vendors and subcontractors for
+                        procurement, logistics, and testing activities, ensuring
+                        timely delivery and execution.
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              {/* Healthcare Website Section */}
+              <div className="space-y-6">
+                <div className="flex justify-between items-start">
+                  <div className="space-y-1">
+                    <div className="flex items-center space-x-3">
+                      <img
+                        src={placeholderLogo} // Replace with actual logo when available
+                        alt="Healthcare Website Logo"
+                        className="h-12 w-auto object-contain"
+                      />
+                      <div>
+                        <p className="font-medium">
+                          Development of Home Healthcare Website on JIRA
+                        </p>
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                          MA, USA
+                        </p>
+                      </div>
                     </div>
+                    <ShinyButton
+                      className="px-4 py-1 text-xs rounded-full mt-1"
+                      onClick={() =>
+                        setShowHealthcareDetails(!showHealthcareDetails)
+                      }
+                    >
+                      {showHealthcareDetails ? "Hide Details" : "Know More"}
+                    </ShinyButton>
+                  </div>
+                  <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
+                    Sept 2023 – Dec 2023
+                  </p>
+                </div>
+
+                {/* Collapsible Section for Healthcare Website */}
+                {showHealthcareDetails && (
+                  <div className="space-y-4 mt-4 border-t border-neutral-200 dark:border-neutral-700 pt-4">
+                    <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
+                      Development of Home Healthcare Website on JIRA | MA, USA
+                    </h3>
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                      <li>
+                        Collaborated with stakeholders to prioritize user
+                        stories based on impact and urgency, ensuring that
+                        critical features like patient scheduling and secure
+                        data storage were delivered in early development
+                        sprints.
+                      </li>
+                      <li>
+                        Assisted in organizing and executing two-week sprints,
+                        utilizing JIRA to manage backlog refinement, sprint
+                        planning, daily stand-ups, resulting in a 20% increase
+                        in team efficiency.
+                      </li>
+                      <li>
+                        Supported the development and execution of testing
+                        protocols, including system verification and user
+                        validation, to ensure that the website met HIPAA
+                        compliance and provided a seamless user experience.
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              {/* NJCU Section */}
+              <div className="space-y-6">
+                <div className="flex justify-between items-start">
+                  <div className="space-y-1">
+                    <div className="flex items-center space-x-3">
+                      <img
+                        src={njcu}
+                        alt="College Logo"
+                        className="h-12 w-auto object-contain"
+                      />
+                      <div>
+                        <p className="font-medium">
+                          NEW JERSEY CITY UNIVERSITY
+                        </p>
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                          Project Assistant
+                          <br />
+                          NJ, USA
+                        </p>
+                      </div>
+                    </div>
+                    <ShinyButton
+                      className="px-4 py-1 text-xs rounded-full mt-1"
+                      onClick={() => setShowNjcuDetails(!showNjcuDetails)}
+                    >
+                      {showNjcuDetails ? "Hide Details" : "Know More"}
+                    </ShinyButton>
                   </div>
                   <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
                     Jan 2023 – May 2023
                   </p>
                 </div>
+
+                {/* Collapsible Section for NJCU */}
+                {showNjcuDetails && (
+                  <div className="space-y-4 mt-4 border-t border-neutral-200 dark:border-neutral-700 pt-4">
+                    <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
+                      NEW JERSEY CITY UNIVERSITY, Project Assistant | NJ, USA
+                    </h3>
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                      <li>
+                        Coordinated with the admissions department to streamline
+                        application processing workflows, reducing turnaround
+                        time by 25% through improved task tracking and
+                        stakeholder communication.
+                      </li>
+                      <li>
+                        Implemented a prospective student feedback system with
+                        services, achieving 92% completion boosting engagement.
+                      </li>
+                      <li>
+                        Planned student onboarding orientations, driving a 15%
+                        increase in on-time completion of required actions.
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </section>
 
