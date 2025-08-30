@@ -6,6 +6,7 @@ import { ShinyButton } from "@/components/magicui/shiny-button";
 import gsoc from "@/assets/images/gsoclogo.png";
 import northeastern from "@/assets/images/northeastern.png";
 import njcu from "@/assets/images/njcu.png";
+import podimetrics from "@/assets/images/podimetrics.png";
 import csi from "@/assets/images/csi.png";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
@@ -98,6 +99,7 @@ const Home = () => {
                 outcomes.
               </p>
             </section>
+
             {/* Experience */}
             <section className="space-y-3">
               <h2 className="text-2xl font-semibold tracking-tight">
@@ -108,16 +110,16 @@ const Home = () => {
                   <div className="space-y-1">
                     <div className="flex items-center space-x-3">
                       <img
-                        src={gsoc}
-                        alt="GSoC logo"
+                        src={podimetrics}
+                        alt="Podimetrics logo"
                         className="h-12 w-auto object-contain"
                       />
                       <div>
-                        <p className="font-medium">
-                          Google Summer of Code @ Mifos Initiative
-                        </p>
+                        <p className="font-medium">Podimetrics</p>
                         <p className="text-sm text-neutral-600 dark:text-muted-foreground">
-                          Contributor
+                          Process Improvement Initiative
+                          <br />
+                          MA, USA
                         </p>
                       </div>
                     </div>
@@ -129,7 +131,7 @@ const Home = () => {
                     </ShinyButton>
                   </div>
                   <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
-                    May 2025 - Present
+                    Present
                   </p>
                 </div>
 
@@ -137,43 +139,43 @@ const Home = () => {
                   <div className="space-y-1 mb-1">
                     <div className="flex items-center space-x-3">
                       <img
-                        src={northeastern}
-                        alt="Northeastern Logo"
+                        src={podimetrics}
+                        alt="Podimetrics Logo"
                         className="h-12 w-auto object-contain"
                       />
                       <div>
-                        <p className="font-medium">
-                          Somaiya Web Development Cell
-                        </p>
+                        <p className="font-medium">Podimetrics</p>
                         <p className="text-sm text-neutral-600 dark:text-muted-foreground">
-                          FullStack Developer
+                          Project Manager
+                          <br />
+                          MA, USA
                         </p>
                       </div>
                     </div>
                   </div>
                   <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
-                    Dec 2024 - Present
+                    Jan 2025 – Jun 2025
                   </p>
                 </div>
 
                 <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
                     <img
-                      src={csi}
-                      alt="CSI Logo"
+                      src={njcu}
+                      alt="College Logo"
                       className="h-12 w-auto object-contain"
                     />
                     <div>
-                      <p className="font-medium">
-                        Computer Society of India KJSCE
-                      </p>
+                      <p className="font-medium">NEW JERSEY CITY UNIVERSITY</p>
                       <p className="text-sm text-neutral-600 dark:text-muted-foreground">
-                        Operations Team Member
+                        Project Assistant
+                        <br />
+                        NJ, USA
                       </p>
                     </div>
                   </div>
                   <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
-                    Aug 2024 - May 2025
+                    Jan 2023 – May 2023
                   </p>
                 </div>
               </div>

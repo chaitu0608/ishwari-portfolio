@@ -50,7 +50,6 @@ const Icons = {
       <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.613-4.042-1.613-.546-1.385-1.333-1.754-1.333-1.754-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.76-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.403c1.02.005 2.045.138 3.003.403 2.29-1.552 3.295-1.23 3.295-1.23.655 1.653.243 2.873.12 3.176.77.84 1.23 1.91 1.23 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.815 1.096.815 2.21 0 1.595-.015 2.88-.015 3.27 0 .32.215.694.825.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
     </svg>
   ),
-
 };
 
 const DATA = {
@@ -68,7 +67,7 @@ const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/craig-rosario/",
+        url: "https://www.linkedin.com/in/ishwari-dhamdhere/",
         icon: Icons.linkedin,
       },
     },
@@ -79,7 +78,8 @@ export function DockDemo() {
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
       <TooltipProvider>
-        <Dock direction="middle"
+        <Dock
+          direction="middle"
           className="p-2 sm:p-3 rounded-full shadow-lg border-2 border-black/20 dark:border-white/20 dark:border-3 hover:border-orange-300 dark:hover:border-orange-400 dark:hover:shadow-xl transition-all duration-500 ease-in-out"
         >
           {/* Internal Navigation */}
