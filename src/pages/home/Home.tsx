@@ -7,6 +7,7 @@ import northeastern from "@/assets/images/northeastern.png";
 import njcu from "@/assets/images/njcu.png";
 import podimetrics from "@/assets/images/podimetrics.png";
 import placeholderLogo from "@/assets/images/podimetrics.png"; // Placeholder logo (optional)
+import lnt from "@/assets/images/lnt.png";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 
@@ -42,6 +43,7 @@ const Home = () => {
     useState(false);
   const [showNjcuDetails, setShowNjcuDetails] = useState(false);
   const [showHealthcareDetails, setShowHealthcareDetails] = useState(false); // State for Healthcare Website details
+  const [showLtDetails, setShowLtDetails] = useState(false); // State for L&T Hydrocarbon Engineering details
 
   return (
     <Wrapper className="bg-white dark:bg-black">
@@ -66,7 +68,7 @@ const Home = () => {
                 24 years old last time I checked
               </p>
               <p className="text-lg font-serif text-blue-600 dark:text-blue-400">
-                Based in Boston, MA, USA
+                Boston, MA, USA
               </p>
             </section>
 
@@ -390,6 +392,65 @@ const Home = () => {
                   </div>
                 )}
               </div>
+              {/* L&T Hydrocarbon Engineering Section */}
+              <div className="space-y-6">
+                <div className="flex justify-between items-start">
+                  <div className="space-y-1">
+                    <div className="flex items-center space-x-3">
+                      <img
+                        src={lnt} // Replace with actual logo when available
+                        alt="L&T Hydrocarbon Engineering Logo"
+                        className="h-12 w-auto object-contain"
+                      />
+                      <div>
+                        <p className="font-medium">
+                          L&T Hydrocarbon Engineering Limited
+                        </p>
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                          Project Assistant Intern
+                          <br />
+                          Mumbai, MH, India
+                        </p>
+                      </div>
+                    </div>
+                    <ShinyButton
+                      className="px-4 py-1 text-xs rounded-full mt-1"
+                      onClick={() => setShowLtDetails(!showLtDetails)}
+                    >
+                      {showLtDetails ? "Hide Details" : "Know More"}
+                    </ShinyButton>
+                  </div>
+                  <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
+                    Sept 2022 – Dec 2022
+                  </p>
+                </div>
+
+                {/* Collapsible Section for L&T Hydrocarbon Engineering */}
+                {showLtDetails && (
+                  <div className="space-y-4 mt-4 border-t border-neutral-200 dark:border-neutral-700 pt-4">
+                    <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
+                      Project Assistant Intern | L&T Hydrocarbon Engineering
+                      Limited | Mumbai, MH, India
+                    </h3>
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                      <li>
+                        Assisted in project documentation and coordination for
+                        hydrocarbon engineering projects, ensuring timely
+                        updates and compliance with internal standards.
+                      </li>
+                      <li>
+                        Supported cross-functional teams in tracking project
+                        milestones and deliverables, improving efficiency by
+                        15%.
+                      </li>
+                      <li>
+                        Conducted research and analysis to identify potential
+                        risks and mitigation strategies for ongoing projects.
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
             </section>
 
             {/* Education */}
@@ -447,41 +508,87 @@ const Home = () => {
               </div>
             </section>
 
-            {/* Skills */}
+            {/* Skills and Interests */}
             <section className="max-w-5xl mx-auto space-y-6 mt-12">
-              <h2 className="text-2xl font-bold tracking-tight">Skills</h2>
+              <h2 className="text-2xl font-bold tracking-tight">
+                Skills & Interests
+              </h2>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {Object.entries(skills).map(([category, list]) => (
-                  <div
-                    key={category}
-                    className="rounded-xl border border-neutral-200 dark:border-muted p-4 bg-white/80 dark:bg-background/50 shadow-sm ring-1 ring-black/5 dark:ring-white/10 transition-all hover:scale-[1.02]"
-                  >
-                    <h3 className="text-lg font-semibold mb-3">{category}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {list.map((skill) => (
-                        <Badge
-                          key={skill}
-                          variant="secondary"
-                          className="text-sm px-2 py-1"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
+                {/* Project & Program Management */}
+                <div className="rounded-xl border border-neutral-200 dark:border-muted p-4 bg-white/80 dark:bg-background/50 shadow-sm ring-1 ring-black/5 dark:ring-white/10 transition-all hover:scale-[1.02]">
+                  <h3 className="text-lg font-semibold mb-3">
+                    Project & Program Management
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "Strategic Planning",
+                      "Program Governance",
+                      "Cross-Functional Leadership",
+                      "Risk & Issue Management",
+                      "Road mapping",
+                      "Portfolio Delivery",
+                      "Negotiation",
+                      "Adaptability",
+                      "Problem-Solving",
+                    ].map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="secondary"
+                        className="text-sm px-2 py-1"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Tools and Platforms */}
+                <div className="rounded-xl border border-neutral-200 dark:border-muted p-4 bg-white/80 dark:bg-background/50 shadow-sm ring-1 ring-black/5 dark:ring-white/10 transition-all hover:scale-[1.02]">
+                  <h3 className="text-lg font-semibold mb-3">
+                    Tools And Platforms
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "MS Teams",
+                      "Trello",
+                      "JIRA",
+                      "MS Project",
+                      "MS Office",
+                      "Excel",
+                      "Kanban Board",
+                      "Python",
+                      "Google Smartsheet",
+                      "Miro",
+                      "Click Up",
+                      "Primavera",
+                      "Power BI",
+                    ].map((tool) => (
+                      <Badge
+                        key={tool}
+                        variant="secondary"
+                        className="text-sm px-2 py-1"
+                      >
+                        {tool}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
               </div>
             </section>
 
-            <section className="mt-16  space-y-4">
+            <section className="mt-16 space-y-4">
               <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
               <p className="text-muted-foreground">
-                If you'd like to reach out, just drop me an email:
+                If you'd like to reach out, just drop me an email or give me a
+                call:
               </p>
               <p className="text-lg font-medium text-blue-500 hover:underline">
-                <a href="mailto:craig@example.com">
-                  dhamdhere.i@northeastern.edu{" "}
+                <a href="mailto:dhamdhere.i@northeastern.edu">
+                  dhamdhere.i@northeastern.edu
                 </a>
+              </p>
+              <p className="text-lg font-medium text-blue-500 hover:underline">
+                <a href="tel:+12016301092">+1 201-630-1092</a>
               </p>
             </section>
           </div>
