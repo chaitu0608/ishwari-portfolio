@@ -64,26 +64,26 @@ const Home = () => {
             {/* About */}
             <section className="space-y-2">
               <h2 className="text-2xl font-semibold tracking-tight">About</h2>
-              <p className="text-neutral-700 dark:text-muted-foreground">
+              <p className="text-neutral-700 dark:text-muted-foreground text-justify">
                 I'm a Project Management professional pursuing my Master’s at
                 Northeastern University. With certifications in CAPM, CSM, and
                 CSPO, I bring a strong foundation in both Agile and Waterfall
                 methodologies.
               </p>
-              <p className="text-neutral-700 dark:text-muted-foreground">
+              <p className="text-neutral-700 dark:text-muted-foreground text-justify">
                 My approach to project management is grounded in methodical
                 execution and clear communication—breaking down complex
                 challenges into structured, actionable steps. I believe that
                 collaboration, adaptability, and clarity are the keys to
                 delivering meaningful results.
               </p>
-              <p className="text-neutral-700 dark:text-muted-foreground">
+              <p className="text-neutral-700 dark:text-muted-foreground text-justify">
                 Through academic projects and professional experience, I’ve
                 honed skills in project coordination, documentation, risk
                 management, and stakeholder engagement, consistently driving
                 efficiency and ensuring alignment across cross-functional teams.
               </p>
-              <p className="text-neutral-700 dark:text-muted-foreground">
+              <p className="text-neutral-700 dark:text-muted-foreground text-justify">
                 I thrive on balancing proven practices with modern
                 methodologies, blending the principles that stand the test of
                 time with the innovation required today to deliver impactful
