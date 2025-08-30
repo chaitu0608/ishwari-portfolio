@@ -3,11 +3,9 @@ import { AuroraBackground } from "@/components/magicui/aurora-background";
 import { Meteors } from "@/components/magicui/meteors";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { ShinyButton } from "@/components/magicui/shiny-button";
-import gsoc from "@/assets/images/gsoclogo.png";
 import northeastern from "@/assets/images/northeastern.png";
 import njcu from "@/assets/images/njcu.png";
 import podimetrics from "@/assets/images/podimetrics.png";
-import csi from "@/assets/images/csi.png";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 
@@ -152,6 +150,12 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
+                    <ShinyButton
+                      className="px-4 py-1 text-xs rounded-full mt-1"
+                      onClick={() => navigate("/projects")}
+                    >
+                      Know more
+                    </ShinyButton>
                   </div>
                   <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
                     Jan 2025 – Jun 2025
