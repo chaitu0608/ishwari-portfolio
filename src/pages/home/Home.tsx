@@ -91,11 +91,13 @@ const Home = () => {
               </p>
             </section>
 
-            {/* Experience */}
+            {/* Work Experience & Projects */}
             <section className="space-y-3">
               <h2 className="text-2xl font-semibold tracking-tight">
                 Work Experience & Projects
               </h2>
+
+              {/* Podimetrics - Process Improvement Initiative */}
               <div className="space-y-6">
                 <div className="flex justify-between items-start">
                   <div className="space-y-1">
@@ -107,7 +109,7 @@ const Home = () => {
                       />
                       <div>
                         <p className="font-medium">Podimetrics</p>
-                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground text-justify">
                           Process Improvement Initiative
                           <br />
                           MA, USA
@@ -134,11 +136,11 @@ const Home = () => {
                     <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
                       Podimetrics, Process Improvement Initiative | MA, USA
                     </h3>
-                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground text-justify">
                       <li>
                         Developed and standardized project management templates
-                        such as charters, plans, stakeholder registers, RACI and
-                        communication plans to ensure consistency.
+                        such as charters, plans, stakeholder registers, RACI,
+                        and communication plans to ensure consistency.
                       </li>
                       <li>
                         Defined requirements, estimates for scope, schedule,
@@ -153,7 +155,7 @@ const Home = () => {
                       <li>
                         Directed cross-functional teams, motivating members,
                         resolving conflicts, and ensuring adherence to
-                        methodologies
+                        methodologies.
                       </li>
                       <li>
                         Delivered status reports and change management processes
@@ -175,7 +177,7 @@ const Home = () => {
                       />
                       <div>
                         <p className="font-medium">Podimetrics</p>
-                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground text-justify">
                           Project Manager
                           <br />
                           MA, USA
@@ -206,7 +208,7 @@ const Home = () => {
                     <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
                       Podimetrics, Project Manager | MA, USA
                     </h3>
-                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground text-justify">
                       <li>
                         Built and maintained integrated program/project
                         schedules, tracking milestones, deliverables,
@@ -273,7 +275,7 @@ const Home = () => {
                         <p className="font-medium">
                           Development of Home Healthcare Website on JIRA
                         </p>
-                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground text-justify">
                           MA, USA
                         </p>
                       </div>
@@ -298,7 +300,7 @@ const Home = () => {
                     <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
                       Development of Home Healthcare Website on JIRA | MA, USA
                     </h3>
-                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground text-justify">
                       <li>
                         Collaborated with stakeholders to prioritize user
                         stories based on impact and urgency, ensuring that
@@ -337,7 +339,7 @@ const Home = () => {
                         <p className="font-medium">
                           NEW JERSEY CITY UNIVERSITY
                         </p>
-                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground text-justify">
                           Project Assistant
                           <br />
                           NJ, USA
@@ -362,7 +364,7 @@ const Home = () => {
                     <h3 className="text-lg font-semibold text-neutral-800 dark:text-white">
                       NEW JERSEY CITY UNIVERSITY, Project Assistant | NJ, USA
                     </h3>
-                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground text-justify">
                       <li>
                         Coordinated with the admissions department to streamline
                         application processing workflows, reducing turnaround
@@ -395,7 +397,7 @@ const Home = () => {
                         <p className="font-medium">
                           L&T Hydrocarbon Engineering Limited
                         </p>
-                        <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                        <p className="text-sm text-neutral-600 dark:text-muted-foreground text-justify">
                           Project Assistant Intern
                           <br />
                           Mumbai, MH, India
@@ -421,7 +423,7 @@ const Home = () => {
                       Project Assistant Intern | L&T Hydrocarbon Engineering
                       Limited | Mumbai, MH, India
                     </h3>
-                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground">
+                    <ul className="list-disc pl-5 text-neutral-700 dark:text-muted-foreground text-justify">
                       <li>
                         Assisted in project documentation and coordination for
                         hydrocarbon engineering projects, ensuring timely
