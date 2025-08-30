@@ -63,22 +63,40 @@ const Home = () => {
               <p className="text-xl text-neutral-600 dark:text-muted-foreground">
                 24 years old last time I checked
               </p>
+              <p className="text-lg font-serif text-blue-600 dark:text-blue-400">
+                Based in Boston, MA, USA
+              </p>
             </section>
 
             {/* About */}
             <section className="space-y-2">
               <h2 className="text-2xl font-semibold tracking-tight">About</h2>
               <p className="text-neutral-700 dark:text-muted-foreground">
-                I'm a fullstack developer who enjoys building clean, functional
-                web apps.
+                I'm a Project Management professional pursuing my Master’s at
+                Northeastern University. With certifications in CAPM, CSM, and
+                CSPO, I bring a strong foundation in both Agile and Waterfall
+                methodologies.
               </p>
               <p className="text-neutral-700 dark:text-muted-foreground">
-                Right now, I'm contributing to GSoC with The Mifos Initiative
-                building secure financial data operations in the new web app
-                using React.
+                My approach to project management is grounded in methodical
+                execution and clear communication—breaking down complex
+                challenges into structured, actionable steps. I believe that
+                collaboration, adaptability, and clarity are the keys to
+                delivering meaningful results.
+              </p>
+              <p className="text-neutral-700 dark:text-muted-foreground">
+                Through academic projects and professional experience, I’ve
+                honed skills in project coordination, documentation, risk
+                management, and stakeholder engagement, consistently driving
+                efficiency and ensuring alignment across cross-functional teams.
+              </p>
+              <p className="text-neutral-700 dark:text-muted-foreground">
+                I thrive on balancing proven practices with modern
+                methodologies, blending the principles that stand the test of
+                time with the innovation required today to deliver impactful
+                outcomes.
               </p>
             </section>
-
             {/* Experience */}
             <section className="space-y-3">
               <h2 className="text-2xl font-semibold tracking-tight">
@@ -165,6 +183,32 @@ const Home = () => {
               <h2 className="text-2xl font-semibold tracking-tight">
                 Education
               </h2>
+
+              {/* NEU Section */}
+              <div className="flex justify-between items-start">
+                <div className="flex items-center space-x-3">
+                  <img
+                    src={somaiya} // Replace with NEU logo if available
+                    alt="College Logo"
+                    className="h-12 w-auto object-contain"
+                  />
+                  <div>
+                    <p className="font-medium">
+                      NORTHEASTERN UNIVERSITY (NEU) |<br /> Boston, United
+                      States of America
+                    </p>
+                    <p className="text-sm text-neutral-600 dark:text-muted-foreground">
+                      Masters of Science in Project Management <br />
+                      (GPA- 3.8/4.0)
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm text-neutral-500 dark:text-muted-foreground mt-1">
+                  Sept 2023 – Aug 2025
+                </p>
+              </div>
+
+              {/* NJCU Section */}
               <div className="flex justify-between items-start">
                 <div className="flex items-center space-x-3">
                   <img
@@ -221,7 +265,9 @@ const Home = () => {
                 If you'd like to reach out, just drop me an email:
               </p>
               <p className="text-lg font-medium text-blue-500 hover:underline">
-                <a href="mailto:craig@example.com">craig.rosario04@gmail.com</a>
+                <a href="mailto:craig@example.com">
+                  dhamdhere.i@northeastern.edu{" "}
+                </a>
               </p>
             </section>
           </div>
