@@ -3,6 +3,7 @@ import { Meteors } from "@/components/magicui/meteors";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import gsoc from "@/assets/images/gsoclogo.png";
+import northeastern from "@/assets/images/northeastern.png";
 import somaiya from "@/assets/images/somaiya.png";
 import csi from "@/assets/images/csi.png";
 import { Badge } from "@/components/ui/badge";
@@ -95,8 +96,8 @@ const Home = () => {
                   <div className="space-y-1">
                     <div className="flex items-center space-x-3">
                       <img
-                        src={somaiya}
-                        alt="Somaiya Logo"
+                        src={northeastern}
+                        alt="Northeastern Logo"
                         className="h-12 w-auto object-contain"
                       />
                       <div>
@@ -148,7 +149,7 @@ const Home = () => {
               <div className="flex justify-between items-start">
                 <div className="flex items-center space-x-3">
                   <img
-                    src={somaiya}
+                    src={northeastern}
                     alt="College Logo"
                     className="h-12 w-auto object-contain"
                   />

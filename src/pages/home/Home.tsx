@@ -4,7 +4,8 @@ import { Meteors } from "@/components/magicui/meteors";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import gsoc from "@/assets/images/gsoclogo.png";
-import somaiya from "@/assets/images/somaiya.png";
+import northeastern from "@/assets/images/northeastern.png";
+import njcu from "@/assets/images/njcu.png";
 import csi from "@/assets/images/csi.png";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
@@ -136,8 +137,8 @@ const Home = () => {
                   <div className="space-y-1 mb-1">
                     <div className="flex items-center space-x-3">
                       <img
-                        src={somaiya}
-                        alt="Somaiya Logo"
+                        src={northeastern}
+                        alt="Northeastern Logo"
                         className="h-12 w-auto object-contain"
                       />
                       <div>
@@ -188,7 +189,7 @@ const Home = () => {
               <div className="flex justify-between items-start">
                 <div className="flex items-center space-x-3">
                   <img
-                    src={somaiya} // Replace with NEU logo if available
+                    src={northeastern} // Replace with NEU logo if available
                     alt="College Logo"
                     className="h-12 w-auto object-contain"
                   />
@@ -212,7 +213,7 @@ const Home = () => {
               <div className="flex justify-between items-start">
                 <div className="flex items-center space-x-3">
                   <img
-                    src={somaiya}
+                    src={njcu}
                     alt="College Logo"
                     className="h-12 w-auto object-contain"
                   />
