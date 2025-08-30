@@ -101,7 +101,7 @@ const Home = () => {
             {/* Experience */}
             <section className="space-y-3">
               <h2 className="text-2xl font-semibold tracking-tight">
-                Experience
+                Work Experience & Projects
               </h2>
               <div className="space-y-6">
                 <div className="flex justify-between items-start">
@@ -123,7 +123,7 @@ const Home = () => {
                     </div>
                     <ShinyButton
                       className="px-4 py-1 text-xs rounded-full mt-1"
-                      onClick={() => navigate("/projects/gsoc-project")}
+                      onClick={() => navigate("/projects/")}
                     >
                       Know more
                     </ShinyButton>
