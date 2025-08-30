@@ -9,7 +9,6 @@ import podimetrics from "@/assets/images/podimetrics.png";
 import placeholderLogo from "@/assets/images/podimetrics.png"; // Placeholder logo (optional)
 import lnt from "@/assets/images/lnt.png";
 import { Badge } from "@/components/ui/badge";
-import { useNavigate } from "react-router-dom";
 
 function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
@@ -25,17 +24,7 @@ function useMediaQuery(query: string): boolean {
   return matches;
 }
 
-const skills = {
-  Languages: ["C/C++", "TypeScript", "JavaScript", "Python"],
-  Frameworks: ["React", "Express", "Node.js"],
-  Styling: ["Tailwind CSS", "ShadCN", "CSS"],
-  Databases: ["MongoDB", "MySQL", "Firebase"],
-  Tools: ["Git", "Docker", "Vercel", "VS Code"],
-  Other: ["Redux Toolkit", "Axios", "Postman", "REST APIs"],
-};
-
 const Home = () => {
-  const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 639px)");
   const Wrapper: React.ElementType = isMobile ? "div" : AuroraBackground;
   const [showPodimetricsDetails, setShowPodimetricsDetails] = useState(false);
