@@ -92,7 +92,7 @@ const Home = () => {
             </section>
 
             {/* Work Experience & Projects */}
-            <section className="space-y-3">
+            <section className="space-y-3 relative">
               <h2 className="text-2xl font-semibold tracking-tight">
                 Work Experience & Projects
               </h2>
